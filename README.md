@@ -24,3 +24,105 @@ ASSIGN = id '=' E;
 E = F (op E)*
 F = (E) | Number | Id
 ```
+
+### 03-compiler ver 2.0
+
+#### testing sample:(path->test/homework_t.c)
+```
+a = 3;
+b = 5;
+if (a > b){
+    t = a;
+}
+else{
+   t = b;
+}
+```
+
+#### testing method:
+1. After u done programming, type "make" in terminal to compile ur code.
+    This is what ya ganna get-> gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
+2. Type "./compiler test/homework_t.c" to demo ur code.
+3. Result:
+```
+    a = 3;     
+    b = 5;     
+    if (a > b){
+        t = a; 
+    }
+    else{      
+    t = b;
+    }
+    ========== lex ==============
+    token=a
+    token==
+    token=3
+    token=;
+    token=b
+    token==
+    token=5
+    token=;
+    token=if
+    token=(
+    token=a
+    token=>
+    token=b
+    token=)
+    token={
+    token=t
+    token==
+    token=a
+    token=;
+    token=}
+    token=else
+    token={
+    token=t
+    token==
+    token=b
+    token=;
+    token=}
+    ========== dump ==============
+    0:a
+    1:=
+    2:3
+    3:;
+    4:b
+    5:=
+    6:5
+    7:;
+    8:if
+    9:(
+    10:a
+    11:>
+    12:b
+    13:)
+    14:{
+    15:t
+    16:=
+    17:a
+    18:;
+    19:}
+    20:else
+    21:{
+    22:t
+    23:=
+    24:b
+    25:;
+    26:}
+    ============ parse =============
+    t0 = 3
+    a = t0
+    t1 = 5
+    b = t1
+    t2 = a
+    t3 = b
+    t4 = t2 > t3
+    if not T4 goto L0
+    t5 = a
+    t = t5
+    if done goto L1
+    (L0)
+    t6 = b
+    t = t6
+    (L1)
+```
