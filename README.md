@@ -110,17 +110,17 @@ token=}
 25:;
 26:}
 ============ parse =============
-t0 = 3
+t0 = 3  //a = 3
 a = t0
-t1 = 5
+t1 = 5  //b = 5
 b = t1
 t2 = a
 t3 = b
-t4 = t2 > t3
-if not T4 goto L0
+t4 = t2 > t3    //t4 is the boolean of (a > b)
+if t4 isn't True goto L0    //if t4 is false, goto L0 to do else block
 t5 = a
 t = t5
-if done goto L1
+goto L1 //if the "if" block is done, end if
 (L0)
 t6 = b
 t = t6

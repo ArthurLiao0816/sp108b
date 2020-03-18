@@ -82,10 +82,10 @@ void IF() {
   skip("if");
   skip("(");
   int e = E();
-  emit("if not T%d goto L%d\n", e, ifBegin);
+  emit("if t%d isn't True goto L%d\n", e, ifBegin);
   skip(")");
   STMT();
-  emit("if done goto L%d\n", ifEnd);
+  emit("goto L%d\n", ifEnd);
   emit("(L%d)\n", ifBegin);
   if (isNext("else")) {
     skip("else");
