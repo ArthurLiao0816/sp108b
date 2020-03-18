@@ -17,8 +17,9 @@
 PROG = STMTS
 BLOCK = { STMTS }
 STMTS = STMT*
-STMT = WHILE | BLOCK | ASSIGN
+STMT = IF | WHILE | BLOCK | ASSIGN
 WHILE = while (E) STMT
+IF = if (E) STMT (else STMT)?
 ASSIGN = id '=' E;
 E = F (op E)*
 F = (E) | Number | Id

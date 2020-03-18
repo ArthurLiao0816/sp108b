@@ -5,6 +5,7 @@ int E();
 void STMT();
 void IF();
 void BLOCK();
+void WHILE();
 
 int tempIdx = 0, labelIdx = 0;
 
@@ -76,15 +77,21 @@ void ASSIGN() {
 
 //IF = if (E) STMT (else STMT)?
 void IF() {
+  int ifBegin = nextLabel();
+  int ifEnd = nextLabel();
   skip("if");
   skip("(");
   int e = E();
+  emit("if not T%d goto L%d\n", e, ifBegin);
   skip(")");
   STMT();
+  emit("if done goto L%d\n", ifEnd);
+  emit("(L%d)\n", ifBegin);
   if (isNext("else")) {
     skip("else");
     STMT();
   }
+  emit("(L%d)\n", ifEnd);
 }
 
 // WHILE = while (E) STMT
@@ -102,7 +109,7 @@ void WHILE() {
   emit("(L%d)\n", whileEnd);
 }
 
-// STMT = WHILE | BLOCK | ASSIGN
+// STMT = IF | WHILE | BLOCK | ASSIGN
 void STMT() {
   if (isNext("while"))
     WHILE();
