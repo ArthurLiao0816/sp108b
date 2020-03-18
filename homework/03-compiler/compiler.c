@@ -74,6 +74,19 @@ void ASSIGN() {
   emit("%s = t%d\n", id, e);
 }
 
+//IF = if (E) STMT (else STMT)?
+void IF() {
+  skip("if");
+  skip("(");
+  int e = E();
+  skip(")");
+  STMT();
+  if (isNext("else")) {
+    skip("else");
+    STMT();
+  }
+}
+
 // WHILE = while (E) STMT
 void WHILE() {
   int whileBegin = nextLabel();
@@ -92,9 +105,9 @@ void WHILE() {
 // STMT = WHILE | BLOCK | ASSIGN
 void STMT() {
   if (isNext("while"))
-    return WHILE();
-  // else if (isNext("if"))
-  //   IF();
+    WHILE();
+  else if (isNext("if"))
+    IF();
   else if (isNext("{"))
     BLOCK();
   else
