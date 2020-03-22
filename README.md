@@ -11,8 +11,8 @@
 
 ## Table of Contents 
 * [Compiler](#Compiler)
-* [compiler ver 2.0](#compiler-ver-2.0)
-* [compiler ver 3.0](#compiler-ver-3.0)
+* [compiler ver 2.0](#compiler-ver-20)
+* [compiler ver 3.0](#compiler-ver-30)
 
 ### Compiler
 
