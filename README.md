@@ -26,7 +26,9 @@ F = (E) | Number | Id
 ```
 
 ### 03-compiler ver 2.0
-
+#### version introduction
+This is an updated version. Compared to previous versions, we added the initial functionality of IF (). Currently, this function can only be used to compile conditional statements consisting of an "if" and an "else".
+Please note that this version of the IF () function does not yet contain an "else if" conditional statement, we will add it as soon as possible, so stay tuned for the next version update.
 #### testing sample:(path->test/homework_t.c)
 ```
 a = 3;
@@ -125,4 +127,21 @@ goto L1 //if the "if" block is done, end if
 t6 = b
 t = t6
 (L1)
+```
+
+### 03-compiler ver 3.0
+
+#### testing sample:(path->test/homework_t2.c)
+```
+a = 3;
+b = 5;
+if (a > b){
+    t = a;
+}
+else if(a == b){
+    printf("There is no bigger one.");
+}
+else{
+   t = b;
+}
 ```
