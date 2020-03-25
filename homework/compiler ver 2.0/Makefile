@@ -1,10 +1,10 @@
 CC := gcc
 CFLAGS = -std=c99 -O0
-TARGET = compiler_2
+TARGET = compiler
 
 all: $(TARGET)
 
-$(TARGET): lexer.c compiler_2.c main.c
+$(TARGET): lexer.c compiler.c main.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
