@@ -75,7 +75,7 @@ void ASSIGN() {
   emit("%s = t%d\n", id, e);
 }
 
-//IF = if (E) STMT (else STMT)?
+//IF = if (E) STMT (else if (E) STMT else STMT)?
 void IF() {
   int ifBegin = nextLabel();
   int ifEnd = nextLabel();

@@ -75,17 +75,28 @@ void ASSIGN() {
   emit("%s = t%d\n", id, e);
 }
 
-//IF = if (E) STMT (else STMT)?
+//IF = if (E) STMT (else if (E) STMT else STMT)?
 void IF() {
-  int ifBegin = nextLabel();
   int ifEnd = nextLabel();
   skip("if");
   skip("(");
   int e = E();
+  int ifBegin = nextLabel();
   emit("if t%d isn't True goto L%d\n", e, ifBegin);
   skip(")");
   STMT();
   emit("goto L%d\n", ifEnd);
+
+  skip("else");
+  skip("if");
+  skip("(");
+  e = E();
+  int ifElif = nextLabel();
+  emit("if t%d isn't True goto L%d\n", e, ifBegin);
+  skip(")");
+  STMT();
+  emit("goto L%d\n", ifEnd);
+
   emit("(L%d)\n", ifBegin);
   if (isNext("else")) {
     skip("else");
