@@ -2,7 +2,7 @@
 ***
 #### version introduction
 * This is an updated version. Compared to previous versions, we added the initial functionality of IF (). Currently, this function can only be used to compile conditional statements consisting of an "if" and an "else".
-* Please note that this version of the IF () function does not yet contain an "else if" conditional statement, we will add it as soon as possible, so stay tuned for the next version update.
+* Please note that this version of the IF () function does not yet contain an "else if" conditional statement, we will add it as soon as possible.
 #### testing sample:(path->test/homework_t.c)
 ```
 a = 3;
