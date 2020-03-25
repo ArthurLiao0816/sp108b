@@ -14,6 +14,10 @@
 * [compiler ver 2.0](#compiler-ver-20)
 * [compiler ver 3.0](#compiler-ver-30)
 
+### Note
+* If git pull failed, git stash first then git pull again.
+* "#define trace printf" is a better way to modularize program if we need.
+* ".c" and ".h" files usually contain program and "define", respectively.
 ### Compiler
 
 #### grammar
