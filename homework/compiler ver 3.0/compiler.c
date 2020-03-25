@@ -107,6 +107,29 @@ void ASSIGN(char *id) {
   // emit("%s = t%d\n", id, e);
 }
 
+//IF = if (E) STMT (else if (E) STMT else STMT)?
+void IF() {
+  int ifBegin = nextLabel();
+  int ifEnd = nextLabel();
+  skip("if");
+  skip("(");
+  int e = E();
+  irEmitIfNotGoto(e, ifBegin);
+  //emit("if t%d isn't True goto L%d\n", e, ifBegin);
+  skip(")");
+  STMT();
+  irEmitGoto(ifEnd);
+  //emit("goto L%d\n", ifEnd);
+  //emit("(L%d)\n", ifBegin);
+  irEmitLabel(ifBegin);
+  if (isNext("else")) {
+    skip("else");
+    STMT();
+  }
+  irEmitLabel(ifEnd);
+  //emit("(L%d)\n", ifEnd);
+}
+
 // while (E) STMT
 void WHILE() {
   int whileBegin = nextLabel();
@@ -129,8 +152,8 @@ void WHILE() {
 void STMT() {
   if (isNext("while"))
     WHILE();
-  // else if (isNext("if"))
-  //   IF();
+  else if (isNext("if"))
+     IF();
   else if (isNext("{"))
     BLOCK();
   else {
