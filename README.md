@@ -1,19 +1,19 @@
-# 系統程式課程 -- 習題專案
+# System Program Course -- Homework Project
 
-欄位 | 內容
+Field | Content
 -----|--------
-學期 | 108 學年度下學期
-學生 |  廖明志
-學號末兩碼 | 29
-教師 | [陳鍾誠](https://misavo.com/blog/%E9%99%B3%E9%8D%BE%E8%AA%A0)
-學校科系 | [金門大學資訊工程系](https://www.nqu.edu.tw/educsie/index.php)
-課程首頁 | [系統程式](https://misavo.com/blog/%E9%99%B3%E9%8D%BE%E8%AA%A0/%E8%AA%B2%E7%A8%8B/%E7%B3%BB%E7%B5%B1%E7%A8%8B%E5%BC%8F)
+Semester | Second semester of 2019
+Student |  廖明志
+ID number | 110710529
+PHD | [陳鍾誠](https://misavo.com/blog/%E9%99%B3%E9%8D%BE%E8%AA%A0)
+School&Department | [NQU CSIE](https://www.nqu.edu.tw/educsie/index.php)
+Course Homepage | [System Program](https://misavo.com/blog/%E9%99%B3%E9%8D%BE%E8%AA%A0/%E8%AA%B2%E7%A8%8B/%E7%B3%BB%E7%B5%B1%E7%A8%8B%E5%BC%8F)
 
 ## Table of Contents 
 * [Compiler](#Compiler)
 * [Note](#Note)
 * [compiler ver 2.0](https://github.com/ArthurLiao0816/sp108b/blob/master/homework/compiler%20ver%202.0/README.md#compiler-ver-20)
-* [compiler ver 3.0](#compiler-ver-30)
+* [compiler ver 3.0](https://github.com/ArthurLiao0816/sp108b/blob/master/homework/compiler%20ver%203.0/README.md#compiler-ver-30)
 
 ### Compiler
 
@@ -34,20 +34,3 @@ F = (E) | Number | Id
 * If "git pull" failed, "git stash" first then git pull again.
 * "#define trace printf" is a better way to modularize program if we need.
 * ".c" and ".h" files usually contain program and "define", respectively.
-
-### compiler ver 3.0
-
-#### testing sample:(path->test/homework_t2.c)
-```
-a = 3;
-b = 5;
-if (a > b){
-    t = a;
-}
-else if(a == b){
-    printf("There is no bigger one.");
-}
-else{
-   t = b;
-}
-```
