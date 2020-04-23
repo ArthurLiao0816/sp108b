@@ -1,5 +1,27 @@
-# Compiler
+### compiler ver 3.0
+***
+#### version introduction
+* This is an updated version. Compared to previous versions, compiler ver 3.0 could not only compile intermediate representation, but also run program!!!
+* Please note that this version of the IF () function does not yet contain an "else if" conditional statement, we will add it as soon as possible.
+* [Home](https://github.com/ArthurLiao0816/sp108b#system-program-course----homework-project)
+#### testing sample:(path->test/homework_t.c)
+```
+a = 3;
+b = 5;
+if (a > b){
+    t = a;
+}
+else{
+   t = b;
+}
+```
 
+#### testing method:
+1. After u done programming, type "make" in terminal to compile multiple ".C" files at the same time.
+    This is what ya ganna get-> gcc -std=c99 -O0 lexer.c compiler.c main.c -o compiler
+2. Type "./compiler test/homework_t.c -ir -run" to demo ur code.
+
+#### Result:
 ```
 PS C:\Users\ldhsi\Desktop\系統程式\sp108b\homework\compiler ver 3.0> make
 gcc -std=c99 -O0 ir.c irvm.c map.c util.c lexer.c compiler.c main.c -o compiler
