@@ -34,3 +34,4 @@ F = (E) | Number | Id
 * If "git pull" failed, "git stash" first then git pull again.
 * "#define trace printf" is a better way to modularize program if we need.
 * ".c" and ".h" files usually contain program and "define", respectively.
+* If "git push origin master" failed, "git pull" first then git push again.
