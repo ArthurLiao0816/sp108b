@@ -158,15 +158,6 @@ void STMT() {
     BLOCK();
   else {
     char *id = next();
-    /*
-    if (eq(id, "int")) {
-      skip("int");
-      while (!isNext(";")) {
-        char *var = skipType(Id);
-        mapAdd(symMap, var, &symList[symTop++]);
-      }
-    }
-    */
     if (isNext("(")) {
       CALL(id);
     } else {
