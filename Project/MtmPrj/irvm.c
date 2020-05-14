@@ -16,6 +16,8 @@ int *varAdd(char *name) {
 }
 
 int irOp2(int a, char *op, int b) {
+  if (eq(op, "++")) return a + 1;
+  if (eq(op, "--")) return a - 1;
   if (eq(op, "+")) return a + b;
   if (eq(op, "-")) return a - b;
   if (eq(op, "*")) return a * b;

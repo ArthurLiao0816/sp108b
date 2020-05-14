@@ -4,6 +4,8 @@
 int  E();
 void STMT();
 void IF();
+void While();
+void For();
 void BLOCK();
 
 int tempIdx = 1, labelIdx = 1;
@@ -82,7 +84,7 @@ int F() {
 // E = F (op E)*
 int E() {
   int i1 = F();
-  while (isNext("+ - * / & | < > = <= >= == != && ||")) {
+  while (isNext("++ -- + - * / & | < > = <= >= == != && ||")) {
     char *op = next();
     int i2 = E();
     int i = nextTemp();
@@ -149,13 +151,42 @@ void WHILE() {
   // emit("(L%d)\n", whileEnd);
 }
 
+// for ( E ; E ; E ) STMT
+void For() {
+  int forBegin = nextLabel();
+  int forEnd = nextLabel();
+  
+  skip("for");
+  skip("(");
+  STMT();
+  //int loopMark = E();
+  //skip(";");
+  irEmitLabel(forBegin);
+  if(!(isNext(";"))){
+    int e = E();
+    irEmitIfNotGoto(e, forEnd);
+  }
+  skip(";");
+  char *id = next();
+  ASSIGN(id);
+  skip(")");
+  
+  STMT();
+  irEmitGoto(forBegin);
+  irEmitLabel(forEnd);
+}
+
 void STMT() {
   if (isNext("while"))
     WHILE();
+  else if (isNext("for"))
+    For();
   else if (isNext("if"))
-     IF();
+    IF();
   else if (isNext("{"))
     BLOCK();
+  else if (isNext(")"))
+    skip(")");
   else {
     char *id = next();
     if (isNext("(")) {
