@@ -3,11 +3,13 @@
 
 ## code
 ```
+working...
 ```
 
 ## 想法
-* 
+* working...
 
 ## result
 ```
+working...
 ```
