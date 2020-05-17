@@ -7,6 +7,7 @@ void IF();
 void While();
 void For();
 void BLOCK();
+void GOTO();
 
 int tempIdx = 1, labelIdx = 1;
 
@@ -103,13 +104,18 @@ int EXP() {
 // ASSIGN = id '=' E
 void ASSIGN(char *id) {
   // char *id = next();
-  skip("=");
-  int e = EXP();
-  irEmitAssignSt(id, e);
-  // emit("%s = t%d\n", id, e);
+  if (isNext(":")) {
+    skip(":");
+  }
+  else {
+    skip("=");
+    int e = EXP();
+    irEmitAssignSt(id, e);
+    // emit("%s = t%d\n", id, e);
+  }
 }
 
-//IF = if (E) STMT (else if (E) STMT else STMT)?
+// IF = if (E) STMT (else if (E) STMT else STMT)?
 void IF() {
   int ifBegin = nextLabel();
   int ifEnd = nextLabel();
@@ -132,7 +138,7 @@ void IF() {
   //emit("(L%d)\n", ifEnd);
 }
 
-// while (E) STMT
+// WHILE = while (E) STMT
 void WHILE() {
   int whileBegin = nextLabel();
   int whileEnd = nextLabel();
@@ -151,8 +157,8 @@ void WHILE() {
   // emit("(L%d)\n", whileEnd);
 }
 
-// for ( E ; E ; E ) STMT
-void For() {
+// FOE = for ( E ; E ; E ) STMT
+void FOR() {
   int forBegin = nextLabel();
   int forEnd = nextLabel();
   
@@ -176,25 +182,48 @@ void For() {
   irEmitLabel(forEnd);
 }
 
+// GOTO = goto [label name]
+void GOTO(){
+  int gotoLable = nextLabel();
+
+  skip("goto");
+  
+  char *lableName = next();
+  
+  skip(";");
+
+  irEmitGoto(gotoLable);
+
+  STMT();
+
+  irEmitLabel(gotoLable);
+}
+
 void STMT() {
   if (isNext("while"))
     WHILE();
   else if (isNext("for"))
-    For();
+    FOR();
   else if (isNext("if"))
     IF();
   else if (isNext("{"))
     BLOCK();
-  else if (isNext(")"))
-    skip(")");
+  /*else if (isNext(")"))
+    skip(")");*/
+  else if (isNext("goto"))
+    GOTO();
   else {
     char *id = next();
     if (isNext("(")) {
       CALL(id);
-    } else {
+      skip(";");
+    } 
+    else if (isNext(":")) skip(":");
+    else {
       ASSIGN(id);
+      skip(";");
     }
-    skip(";");
+    
   }
 }
 
