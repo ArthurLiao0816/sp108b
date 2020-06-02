@@ -1,6 +1,6 @@
 # [References](README.md#rust-learning)
 ---
-## Ch 1.
+## Ch1.
 ### a book about Rust
 * https://kaisery.gitbooks.io/trpl-zh-cn/content/ch01-00-getting-started.html<br>
 ### grammar of markdown

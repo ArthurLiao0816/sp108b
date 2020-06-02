@@ -2,5 +2,5 @@
 ---
 
 ## Table of Contents
-### 1. [Setting up](Setting%20up.md#setting-up)
+### Chapter 1 [Setting up](Setting%20up.md#setting-up)
 ### * [References](References#References)
