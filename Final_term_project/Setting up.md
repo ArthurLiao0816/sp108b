@@ -4,7 +4,7 @@
 ## On Windows
 ---
 ### 1. Install `rustup` from [HERE](https://www.rust-lang.org/zh-TW/tools/install)<br>
-  ![install_screenshot_website](Picture/install_screenshot_website.png)
+* ![install_screenshot_website](Picture/install_screenshot_website.png)
 ### 2. Run the executable(input 'y')<br>
 * ![install_screenshot_executable](Picture/install_screenshot_executable.png)<br>
 * ![install_screenshot_executable_installation](Picture/install_screenshot_executable_installation.png)
