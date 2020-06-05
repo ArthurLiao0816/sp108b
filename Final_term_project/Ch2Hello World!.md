@@ -26,8 +26,8 @@
 *  I made it. \≧◇≦/
 ![compile_screenshot_HelloWorld_success](Picture/compile_screenshot_HelloWorld_success.png)
 
-### 7. I find out something. Although [this book](https://kaisery.gitbooks.io/trpl-zh-cn/content/ch01-02-hello-world.html) mentions that we need to use `.\main.exe` to run our programs, the truth is...
-* I have THESE ways to run my executable!!!
+### 7. I find out something. Although [this book](https://kaisery.gitbooks.io/trpl-zh-cn/content/ch01-02-hello-world.html) mentions that we need to use `.\main.exe` to run our programs in Windows, the truth is...
+* I have THESE ways to run my executable in Windows if I use Microsoft PowerShell!!!
 ![compile_screenshot_HelloWorld_WindowsPowerShell](Picture/compile_screenshot_HelloWorld_WindowsPowerShell.png)<br><br>
 * After figuring it out, I start using Microsoft PowerShell as my tool on running Rust programs.
 
