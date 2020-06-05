@@ -44,3 +44,6 @@
 
 ### 2. `println!("Hello, world!");`
 * `println!` prints `Hello, world!` as a variable, and end the code with a `semicolon` aka `;` .
+
+### P.S.
+* Rust is an `aheah-of-time compiled` language. It means you could give other persons an executable, they can run it and don't even need to download Rust.
