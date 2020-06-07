@@ -8,7 +8,7 @@
 
 ### 2. Run the executable ( enter 'y' )<br>
 * ![install_screenshot_executable](Picture/install_screenshot_executable.png)<br>
-* ![install_screenshot_executable_installation](Picture/install_screenshot_executable_installation.png)
+![install_screenshot_executable_installation](Picture/install_screenshot_executable_installation.png)
 
 ### 3. Update and Check<br>
 * open command prompt(cmd)<br>
@@ -17,3 +17,5 @@
 * use `rustc --version` to check if you install `rustup` successfully<br>
 * SUCCESS!<br>
 ![install_screenshot_rustSuccess](Picture/install_screenshot_rustSuccess.png)<br>
+
+## [References](References.md#Ch1.)
