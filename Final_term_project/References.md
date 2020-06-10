@@ -20,3 +20,7 @@
 ## [Ch3.](Ch3Hello%20Cargo.md#Hello-Cargo)
 ### Hello, Cargo
 * https://kaisery.gitbooks.io/trpl-zh-cn/content/ch01-03-hello-cargo.html<br>
+### tree(Microsoft PowerShell)
+* https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/tree<br>
+### briefly introduction of `Cargo`
+* https://doc.rust-lang.org/cargo/getting-started/first-steps.html<br><br>

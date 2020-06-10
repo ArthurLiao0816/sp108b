@@ -190,3 +190,9 @@ PS C:\Users\ldhsi\Desktop\系統程式\sp108b\Project\MtmPrj> ./compiler test/go
 12: t3 = t1 + t2 (10)
 13: a = t3 (10)
 ```
+ 
+```
+我的編譯器擴充自老師的課堂範例， if, goto, for 語法則是新加入的。
+if, goto, for 是我 100% 原創的。
+參考老師的範例之後，我讀懂了，於是完全靠自己寫出 if, goto, for 擴充部分。
+```
