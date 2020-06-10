@@ -23,4 +23,8 @@
 ### tree(Microsoft PowerShell)
 * https://docs.microsoft.com/zh-tw/windows-server/administration/windows-commands/tree<br>
 ### briefly introduction of `Cargo`
-* https://doc.rust-lang.org/cargo/getting-started/first-steps.html<br><br>
+* https://doc.rust-lang.org/cargo/getting-started/first-steps.html<br>
+### sections of a Cargo manifest
+* https://doc.rust-lang.org/cargo/reference/manifest.html<br>
+### Semantic Versioning 2.0.0
+* https://semver.org/lang/zh-TW/spec/v2.0.0.html<br>

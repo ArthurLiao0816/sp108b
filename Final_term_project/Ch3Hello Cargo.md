@@ -9,7 +9,7 @@
 
 ### 3.  enter `cargo new hello_cargo` to create a cargo directory
 
-### 4.  `cd` to `hello_cargo` and `ls` it
+### 4.  `cd` to `hello_cargo` and `tree. /f` it
 * you'll see...<br><br>
 ![cargo_screenshot_creat_file](Picture/cargo_screenshot_creat_file.png)<br><br>
 * this step creates one directory and two files in `hello_cargo` directory
@@ -27,9 +27,18 @@
 
     [dependencies]
     ```
+* `[package]` defines a package<br>
+* `name` is the name of this package<br>
+* `version` is the version of this package<br>
+    * `"x.y.z"` :
+    * `x` : MAJOR version when you make incompatible API changes.<br>
+    * `y` : MINOR version when you add functionality in a backwards compatible manner.<br>
+    * `z` : PATCH version when you make backwards compatible bug fixes.<br>
+* `authors` is the author of this package<br>
 
 ### 6.  `cd` to `src` directory and run the file inside it
-* result<br><br>
-![cargo_screenshot_compile_src_main](Picture/cargo_screenshot_compile_src_main.png)
-
+* result ( compile -> run executable )<br><br>
+    ![cargo_screenshot_compile_src_main](Picture/cargo_screenshot_compile_src_main.png)
+* result ( using `cargo run` )<br><br>
+    ![cargo_screenshot_cargo-run_src_main](Picture/cargo_screenshot_cargo-run_src_main.png)
 ## [References](References.md#Ch3.)
