@@ -1,4 +1,4 @@
-### 參考資料
+### References
 * [for 語法](http://dhcp.tcgs.tc.edu.tw/c/p007.htm)
 
 * [goto 語法](http://tw.gitbook.net/cprogramming/c_goto_statement.html)
