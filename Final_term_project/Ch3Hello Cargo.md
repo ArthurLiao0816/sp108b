@@ -35,10 +35,18 @@
     * `y` : MINOR version when you add functionality in a backwards compatible manner.<br>
     * `z` : PATCH version when you make backwards compatible bug fixes.<br>
 * `authors` is the author of this package<br>
+* `edition` the Rust edition<br>
+* `[dependencies]` package library dependencies
 
 ### 6.  `cd` to `src` directory and run the file inside it
 * result ( compile -> run executable )<br><br>
     ![cargo_screenshot_compile_src_main](Picture/cargo_screenshot_compile_src_main.png)
 * result ( using `cargo run` )<br><br>
     ![cargo_screenshot_cargo-run_src_main](Picture/cargo_screenshot_cargo-run_src_main.png)
+* Cargo will generate a "Hello, world"-printing file for us. ≧∀≦
+
+### SUMMARY
+* Cargo puts codes in src directory and a `cargo.toml` configuration file.
+* Cargo help your project well organized.
+* Put only source codes in src directory.
 ## [References](References.md#Ch3.)

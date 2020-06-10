@@ -34,13 +34,13 @@
 ## analysis
 
 ### 1. function `main`
-* ```
+* `main` is a special function, which always runs first.<br>
+  ```
   fn main(){  
 
   }
   ```
-
-* `main` is a special function, which always runs first.
+  <br>
 
 ### 2. `println!("Hello, world!");`
 * `println!` prints `Hello, world!` as a variable, and end the code with a `semicolon` aka `;` .
