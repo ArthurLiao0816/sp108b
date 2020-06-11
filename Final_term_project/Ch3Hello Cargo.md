@@ -43,7 +43,7 @@
     ![cargo_screenshot_compile_src_main](Picture/cargo_screenshot_compile_src_main.png)
 * result ( using `cargo run` )<br><br>
     ![cargo_screenshot_cargo-run_src_main](Picture/cargo_screenshot_cargo-run_src_main.png)
-* Cargo will generate a "Hello, world"-printing file for us. ≧∀≦
+* Cargo generates a "Hello, world"-printing file for us. ≧∀≦
 
 ### Instruction
 * `cargo --version`

@@ -28,3 +28,11 @@
 * https://doc.rust-lang.org/cargo/reference/manifest.html<br>
 ### Semantic Versioning 2.0.0
 * https://semver.org/lang/zh-TW/spec/v2.0.0.html<br>
+
+## [Ch4.](Ch4Guessing%20Game.md#Rust-Grammar)
+### Tutorial from RUNOOB
+* https://www.runoob.com/rust/rust-basic-syntax.html<br>
+
+## [Ch5.](Ch5Maze%20Game.md#Maze-Game)
+### Tutorial from RUNOOB
+* https://www.runoob.com/rust/rust-basic-syntax.html<br> 
