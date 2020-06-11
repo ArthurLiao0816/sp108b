@@ -1,4 +1,4 @@
-# [Maze Game]()
+# [Maze Game](README.md#rust-learning)
 ---
 
 ## process
