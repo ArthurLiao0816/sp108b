@@ -45,8 +45,16 @@
     ![cargo_screenshot_cargo-run_src_main](Picture/cargo_screenshot_cargo-run_src_main.png)
 * Cargo will generate a "Hello, world"-printing file for us. ≧∀≦
 
+### Instruction
+* `cargo --version`
+* `cargo new` + [derectory name] : create a cargo directory
+* `cargo build` : build your project 
+* `cargo run` : compile `main.rs` and run `main.exe`
+* `cargo check` : check if the code could compile ( won't compile the file )
+
 ### SUMMARY
 * Cargo puts codes in src directory and a `cargo.toml` configuration file.
 * Cargo help your project well organized.
 * Put only source codes in src directory.
+
 ## [References](References.md#Ch3.)

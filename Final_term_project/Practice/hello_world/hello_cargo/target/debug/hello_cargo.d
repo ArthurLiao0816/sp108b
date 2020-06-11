@@ -1,0 +1,1 @@
+C:\Users\ldhsi\Desktop\系統程式\sp108b\Final_term_project\Practice\hello_world\hello_cargo\target\debug\hello_cargo.exe: C:\Users\ldhsi\Desktop\系統程式\sp108b\Final_term_project\Practice\hello_world\hello_cargo\src\main.rs
