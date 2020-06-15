@@ -29,7 +29,7 @@
 ### Semantic Versioning 2.0.0
 * https://semver.org/lang/zh-TW/spec/v2.0.0.html<br>
 
-## [Ch4.](Ch4Guessing%20Game.md#Rust-Grammar)
+## [Ch4.](Ch4Rust%20Grammar.md#Rust-Grammar)
 ### Tutorial from RUNOOB
 * https://www.runoob.com/rust/rust-basic-syntax.html<br>
 
