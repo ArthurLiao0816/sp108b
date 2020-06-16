@@ -34,17 +34,25 @@ fn main() {
         println!("movement.len() = {}", movement.len());
 
         //player_move(maze, player_position, movement, code);
-        if (movement == "up") && (maze[player_position[0] - 1][player_position[1]] != 1) && ((player_position[0] - 1) <= 3) && ((player_position[0] - 1) >= 0) {
-            player_position[0] -= 1;
+        if (movement == "up") && ((player_position[0] - 1) <= 3) && ((player_position[0] - 1) >= 0) {
+            if maze[player_position[0] - 1][player_position[1]] != 1 {
+                player_position[0] -= 1;
+            }
         }
-        else if (movement == "down") && (maze[player_position[0] + 1][player_position[1]] != 1) && ((player_position[0] + 1)) <= 3 && ((player_position[0] + 1) >= 0) {
-            player_position[0] += 1;
+        else if (movement == "down") && ((player_position[0] + 1)) <= 3 && ((player_position[0] + 1) >= 0) {
+            if maze[player_position[0] + 1][player_position[1]] != 1 {
+                player_position[0] += 1;
+            }
         }
-        else if (movement == "right") && (maze[player_position[0]][player_position[1] + 1] != 1) && ((player_position[1] + 1) <= 3) && ((player_position[1] + 1) >= 0) {
-            player_position[1] += 1;
+        else if (movement == "right") && ((player_position[1] + 1) <= 3) && ((player_position[1] + 1) >= 0) {
+            if maze[player_position[0]][player_position[1] + 1] != 1 {
+                player_position[1] += 1;
+            }
         }
-        else if (movement == "left") && (maze[player_position[0]][player_position[1] - 1] != 1) && ((player_position[1] - 1) <= 3) && ((player_position[1] - 1) >= 0) {
-            player_position[1] -= 1;
+        else if (movement == "left") && ((player_position[1] - 1) <= 3) && ((player_position[1] - 1) >= 0) {
+            if maze[player_position[0]][player_position[1] - 1] != 1 {
+                player_position[1] -= 1;
+            }
         }
         else if movement == "-1" {
             break;
@@ -65,7 +73,7 @@ fn main() {
     }
 }
 
-fn instruction() -> i32 {
+fn instruction() {
     println!(
 "=================
 direction | code
@@ -77,8 +85,6 @@ leftward  | left
 -----------------
 quitting  | -1
 =================");
-
-    return 0;
 }
 
 fn maze_status(maze : [[usize; 4]; 4], player_position : [usize; 2]) -> i32 {
