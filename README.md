@@ -16,6 +16,7 @@ Course Homepage | [System Program](https://misavo.com/blog/%E9%99%B3%E9%8D%BE%E8
 * [compiler ver 3.0](https://github.com/ArthurLiao0816/sp108b/blob/master/homework/compiler%20ver%203.0/README.md#compiler-ver-30)
 * [PowerJitCall](https://github.com/ArthurLiao0816/sp108b/blob/master/homework/power/README.md#powerjitcall)
 * [compiler ver 4.0](https://github.com/ArthurLiao0816/sp108b/tree/master/Project/MtmPrj#compiler-ver-40)
+* [Rust Learning](https://github.com/ArthurLiao0816/sp108b/tree/master/Final_term_project#rust-learning)
 
 ### Compiler
 
