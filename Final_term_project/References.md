@@ -29,10 +29,10 @@
 ### Semantic Versioning 2.0.0
 * https://semver.org/lang/zh-TW/spec/v2.0.0.html<br>
 
-## [Ch4.](Ch4Rust%20Grammar.md#Rust-Grammar)
+## [Ch4.](Ch4Maze%20Game.md#Maze-Game)
 ### Tutorial from RUNOOB
 * https://www.runoob.com/rust/rust-basic-syntax.html<br>
-
-## [Ch5.](Ch5Maze%20Game.md#Maze-Game)
-### Tutorial from RUNOOB
-* https://www.runoob.com/rust/rust-basic-syntax.html<br> 
+### &str String Slices
+* https://www.youtube.com/watch?v=TnDFFFgzNwI<br>
+### Reading User Input
+* https://www.youtube.com/watch?v=07pDD0uLjYc<br>
