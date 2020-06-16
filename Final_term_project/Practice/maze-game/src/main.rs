@@ -4,17 +4,14 @@
 use std::io::stdin;
 
 fn main() {
-    //setups
-    let mut i : i32 = 0;
-    let mut j : i32 = 0;
 
+    //setups
     let mut maze : [[usize; 4]; 4] = [[1, 1, 1, 1],
                                     [0, 0, 1, 1],
                                     [1, 0, 0, 0],
                                     [1, 1, 1, 1]];
 
     let mut player_position : [usize; 2] = [1, 0];
-    let code : [&str; 5] = ["up", "down", "right", "left", "-1"];
     let mut movement : &str = "";
 
     //game
@@ -31,7 +28,7 @@ fn main() {
         movement = &input[0..(input.len() - 2)];
 
         //debugging block
-        println!("movement.len() = {}", movement.len());
+        //println!("movement.len() = {}", movement.len());
 
         //player_move(maze, player_position, movement, code);
         if (movement == "up") && ((player_position[0] - 1) <= 3) && ((player_position[0] - 1) >= 0) {
@@ -58,8 +55,8 @@ fn main() {
             break;
         }
         else {
-            println!("{}", movement);
-            println!("please enter the right code");
+            //println!("{}", movement);
+            println!("you entered {}, please enter the right code", movement);
             continue;
         }
 
@@ -87,7 +84,7 @@ quitting  | -1
 =================");
 }
 
-fn maze_status(maze : [[usize; 4]; 4], player_position : [usize; 2]) -> i32 {
+fn maze_status(maze : [[usize; 4]; 4], player_position : [usize; 2]) {
 
     if player_position[0] > 3 || player_position[0] < 0 {
         println!("y-axis is out of range");
@@ -114,6 +111,4 @@ fn maze_status(maze : [[usize; 4]; 4], player_position : [usize; 2]) -> i32 {
         }
         print!("\n");
     }
-
-    return 0;
 }
