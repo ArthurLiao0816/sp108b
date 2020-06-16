@@ -6,7 +6,7 @@ use std::io::stdin;
 fn main() {
 
     //setups
-    let mut maze : [[usize; 4]; 4] = [[1, 1, 1, 1],
+    let maze : [[usize; 4]; 4] = [[1, 1, 1, 1],
                                     [0, 0, 1, 1],
                                     [1, 0, 0, 0],
                                     [1, 1, 1, 1]];
@@ -31,22 +31,22 @@ fn main() {
         //println!("movement.len() = {}", movement.len());
 
         //player_move(maze, player_position, movement, code);
-        if (movement == "up") && ((player_position[0] - 1) <= 3) && ((player_position[0] - 1) >= 0) {
+        if (movement == "up") && ((player_position[0] - 1) <= 3) {
             if maze[player_position[0] - 1][player_position[1]] != 1 {
                 player_position[0] -= 1;
             }
         }
-        else if (movement == "down") && ((player_position[0] + 1)) <= 3 && ((player_position[0] + 1) >= 0) {
+        else if (movement == "down") && ((player_position[0] + 1)) <= 3 {
             if maze[player_position[0] + 1][player_position[1]] != 1 {
                 player_position[0] += 1;
             }
         }
-        else if (movement == "right") && ((player_position[1] + 1) <= 3) && ((player_position[1] + 1) >= 0) {
+        else if (movement == "right") && ((player_position[1] + 1) <= 3) {
             if maze[player_position[0]][player_position[1] + 1] != 1 {
                 player_position[1] += 1;
             }
         }
-        else if (movement == "left") && ((player_position[1] - 1) <= 3) && ((player_position[1] - 1) >= 0) {
+        else if (movement == "left") && ((player_position[1] - 1) <= 3) {
             if maze[player_position[0]][player_position[1] - 1] != 1 {
                 player_position[1] -= 1;
             }
@@ -86,29 +86,21 @@ quitting  | -1
 
 fn maze_status(maze : [[usize; 4]; 4], player_position : [usize; 2]) {
 
-    if player_position[0] > 3 || player_position[0] < 0 {
-        println!("y-axis is out of range");
-    }
-    else if player_position[1] > 3 || player_position[1] < 0 {
-        println!("x-axis is out of range");
-    } 
-    else {
-        for i in 0..4 {
-            let i = i as usize;
-            for j in 0..4 {
-                let j = j as usize;
-                if (i == player_position[0]) && (j == player_position[1]) {
-                    print!("*");
-                }
-                else if maze[i][j] == 1 {
-                    print!("+");
-                }
-                else {
-                    print!(" ");
-                }
+    for i in 0..4 {
+        let i = i as usize;
+        for j in 0..4 {
+            let j = j as usize;
+            if (i == player_position[0]) && (j == player_position[1]) {
+                print!("*");
             }
-            print!("\n");
+            else if maze[i][j] == 1 {
+                print!("+");
+            }
+            else {
+                print!(" ");
+            }
         }
         print!("\n");
     }
+    print!("\n");
 }

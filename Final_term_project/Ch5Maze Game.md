@@ -278,5 +278,28 @@
         }
         ```
 
+## result
+* normal playing process<br>
+    * initial maze<br><br>
+    ![cargo_screenshot_maze-game_initial_maze](Picture/cargo_screenshot_maze-game_initial_maze.png)
+
+    * first right<br><br>
+    ![cargo_screenshot_maze-game_1st_right](Picture/cargo_screenshot_maze-game_1st_right.png)
+
+    * second down<br><br>
+    ![cargo_screenshot_maze-game_2ed_down](Picture/cargo_screenshot_maze-game_2ed_down.png)
+
+    * third right<br><br>
+    ![cargo_screenshot_maze-game_3rd_right](Picture/cargo_screenshot_maze-game_3rd_right.png)
+
+    * 4th right and success<br><br>
+    ![cargo_screenshot_maze-game_4th_right_and_success](Picture/cargo_screenshot_maze-game_4th_right_and_success.png)
+
+* enter wrong code<br>
+    ![cargo_screenshot_maze-game_wrong_code](Picture/cargo_screenshot_maze-game_wrong_code.png)
+
+* quit game before success<br>
+    ![cargo_screenshot_maze-game_quit_game](Picture/cargo_screenshot_maze-game_quit_game.png)
+
 
 ## [References](References.md#Ch5.)
