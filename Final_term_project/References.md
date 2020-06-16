@@ -9,7 +9,7 @@
 ### common senses about cmd
 * https://lnpcd.blogspot.com/2012/07/01.html<br>
 
-## [Ch2.](Ch2Hello%20World!.md#Hello-World!)
+## [Ch2.](Ch2Hello%20World!.md#hello-world)
 ### RUST error: linker `link.exe` not found
 * https://www.jaacostan.com/2019/12/rust-error-linker-linkexe-not-found.html<br>
 ### english of marks
