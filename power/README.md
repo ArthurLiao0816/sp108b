@@ -9,7 +9,7 @@ power(11, 3)=1331
 原理
 PS C:\Users\abcd1\Desktop\系統程式\sp108b\power> gcc -c power.c
 PS C:\Users\abcd1\Desktop\系統程式\sp108b\power> objdump -d power.o
-
+```
 power.o:     file format pe-i386
 
 
@@ -31,3 +31,4 @@ Disassembly of section .text:
   2c:   c9                      leave
   2e:   90                      nop
   2f:   90                      nop
+  ```
