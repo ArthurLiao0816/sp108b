@@ -1,5 +1,6 @@
 # Rust Learning
 ---
+[GitBook version](https://s110710529.gitbook.io/ldhs/)
 
 ## Table of Contents
 
