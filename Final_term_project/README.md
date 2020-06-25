@@ -16,4 +16,7 @@
 ### [Chapter 4  Maze Game](Ch4Maze%20Game.md#Maze-Game)
 * Make a maze-game project to practice Rust.<br><br>
 
+### [Chapter 5  Interesting Things](Ch5Interesting%20Things.md#Interesting-Things)
+* Some interesting things which I found or my classmates told me.<br><br>
+
 ### [References](References.md#References)

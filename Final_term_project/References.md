@@ -36,3 +36,7 @@
 * https://www.youtube.com/watch?v=TnDFFFgzNwI<br>
 ### Reading User Input
 * https://www.youtube.com/watch?v=07pDD0uLjYc<br>
+
+## [Ch5.](Ch5Interesting%20Things.md#Interesting-Things)
+### Program reads input before printing
+* https://stackoverflow.com/questions/34993744/why-does-this-read-input-before-printing<br>
